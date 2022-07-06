@@ -1,4 +1,4 @@
-
+@import "../../responivity/mediaQueries.scss";
 %button-styles{
     font-size: 1.5rem;
     border-radius: 10px;
@@ -11,10 +11,16 @@
     background-color: #85FFBD;
     background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
     height: 100vh;
+    width: 100vw;
     text-align: center;
 
     &__title{
         padding: 3rem;
+
+        @include screen(extra-small, small){
+            padding-top: 1rem;
+            padding-right: 3rem;
+        }
 
         h1{
             font-size: 4rem;
@@ -24,8 +30,16 @@
         display: grid;
         grid-template-areas: "area area";
         grid-template-columns: 1fr 1fr;
-        height: auto;
         gap: 4rem;
+
+        @include screen(extra-small, small){
+            display: flex;
+            flex-direction: column;
+        }
+        
+        @include screen(small, large){
+            gap: 2rem;
+        }
 
         h2{
             grid-area: area;
