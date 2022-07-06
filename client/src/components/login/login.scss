@@ -1,0 +1,132 @@
+@import "../animations/label-animation.scss";
+@import "../../responivity/mediaQueries.scss";
+
+%input-styles{
+    font-family: 'Syne', sans-serif;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid fuchsia;
+    width: 50%;
+    font-size: 1.2rem;
+    text-align: center;
+    font-style: italic;
+
+    @include screen(extra-small, small){
+        width: 80%;
+    }
+}
+
+%button-styles{
+    font-size: 1.2rem;
+    border-radius: 10px;
+    padding: 5px 10px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.login{
+    font-family: 'Syne', sans-serif;
+    text-align: center;
+    background-color: #FFDEE9;
+    background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+    height: 100vh;
+    width: 100vw;
+
+    &__title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 30vh;
+        justify-content: space-evenly;
+
+        h2{
+            font-size: 4rem;
+        }
+
+        &--close{
+            position: absolute;
+            right: 4%;
+            top: 2.5%;
+            font-size: 3rem;
+            cursor: pointer;
+            transition: transform 0.4s;
+
+            @include screen(extra-small, small){
+                font-size: 2rem;
+                right: 2%;
+                top: 1%;
+
+            }
+        }
+        &--close:hover{
+            color: red;
+            transform: rotate(360deg) scale(1.5);
+        }
+    }
+
+    &__panel{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        height: 40vh;
+        justify-content: space-evenly;
+
+        @include screen(extra-small, small){
+            height: 50vh;
+        }
+
+        @include screen(small, large){
+            height: 50vh;
+        }
+
+        &--username{
+
+            input{
+            @extend %input-styles;
+            }
+        }
+
+        &--password{
+
+            input{
+            @extend %input-styles;
+            }
+        }
+
+        &--button{
+
+            button{
+                @extend %button-styles;
+                animation-name: out;
+                animation-duration: 0.7s;
+            }
+            button:hover{
+                animation-name: btn;
+                animation-duration: 0.7s;
+                animation-fill-mode: forwards;
+            }
+        }
+    }
+}
+
+@keyframes btn {
+    from{
+        background-color: transparent;
+        box-shadow: none;
+    }
+    to{
+        background-color: gold;
+        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    }
+}
+@keyframes out {
+    from{
+        background-color: gold;
+        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    }
+    to{
+        background-color: transparent;
+        box-shadow: none;
+    }
+}
+
