@@ -4,7 +4,8 @@ import { useNavigate } from "react-router-dom";
 import "./regestry.css"
 
 const Regestry = () =>{
-    const history = useNavigate()
+    const history = useNavigate();
+    
     return(
         <div className="regestry">
             <div className="regestry__title">

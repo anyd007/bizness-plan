@@ -90,6 +90,11 @@ input:not(:placeholder-shown) + .spanAnime {
 .login__title h2 {
   font-size: 4rem;
 }
+@media (min-width: 230px) and (max-width: 480px) {
+  .login__title h2 {
+    font-size: 3rem;
+  }
+}
 .login__title--close {
   position: absolute;
   right: 4%;
