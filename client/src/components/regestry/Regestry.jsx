@@ -31,6 +31,9 @@ const Regestry = () =>{
                             <span className="spanAnime">POWTÓRZ HASŁO</span>
                     </label>
                 </div>
+                <div className="regestry__panel--button">
+                    <button>ZAREJESTRUJ</button>
+                </div>
             </div>
         </div>
     )

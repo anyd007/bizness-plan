@@ -15,6 +15,14 @@
   }
 }
 
+.regestry__panel--button button {
+  font-size: 1.2rem;
+  border-radius: 10px;
+  padding: 5px 10px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 .regestry {
   font-family: "Syne", sans-serif;
   text-align: center;
@@ -32,8 +40,13 @@
 @media (min-width: 230px) and (max-width: 480px) {
   .regestry__title {
     padding-top: 3rem;
-    margin-bottom: 4rem;
-    height: 20vh;
+    height: 25vh;
+  }
+}
+@media (min-width: 480px) and (max-width: 960px) {
+  .regestry__title {
+    height: 30vh;
+    gap: 1rem;
   }
 }
 .regestry__title h2 {
@@ -73,7 +86,71 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  justify-items: center;
 }
+@media (min-width: 230px) and (max-width: 960px) {
+  .regestry__panel {
+    gap: 2rem;
+    height: 60vh;
+  }
+}
+.regestry__panel--button button {
+  -webkit-animation-name: out;
+          animation-name: out;
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
+}
+.regestry__panel--button button:hover {
+  -webkit-animation-name: btn;
+          animation-name: btn;
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
 label {
   position: relative;
+}
+
+@-webkit-keyframes btn {
+  from {
+    background-color: transparent;
+    box-shadow: none;
+  }
+  to {
+    background-color: gold;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  }
+}
+
+@keyframes btn {
+  from {
+    background-color: transparent;
+    box-shadow: none;
+  }
+  to {
+    background-color: gold;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  }
+}
+@-webkit-keyframes out {
+  from {
+    background-color: gold;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  }
+  to {
+    background-color: transparent;
+    box-shadow: none;
+  }
+}
+@keyframes out {
+  from {
+    background-color: gold;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  }
+  to {
+    background-color: transparent;
+    box-shadow: none;
+  }
 }/*# sourceMappingURL=regestry.css.map */

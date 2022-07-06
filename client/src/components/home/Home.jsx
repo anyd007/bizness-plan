@@ -18,7 +18,7 @@ const history = useNavigate()
                 </div>
                 <div className="home__choose--login">
                     <h3>LOGOWANIE</h3>
-                    <button>WEJDŹ</button>
+                    <button onClick={()=>history("/login")}>WEJDŹ</button>
                 </div>
             </div>
         </div>

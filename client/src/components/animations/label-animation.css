@@ -19,7 +19,7 @@ input::placeholder {
 .spanAnime {
   width: 100%;
   position: absolute;
-  top: -60%;
+  bottom: -100%;
   left: 50%;
   transform: translate(-50%);
   transition-duration: 0.4s;

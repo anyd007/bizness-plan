@@ -14,6 +14,13 @@
         width: 80%;
     }
 }
+%button-styles{
+    font-size: 1.2rem;
+    border-radius: 10px;
+    padding: 5px 10px;
+    background-color: transparent;
+    cursor: pointer;
+}
 
 .regestry{
     font-family: 'Syne', sans-serif;
@@ -31,8 +38,12 @@
 
         @include screen(extra-small, small){
             padding-top: 3rem;
-            margin-bottom: 4rem;
-            height: 20vh;
+            height: 25vh;
+        }
+
+        @include screen(small, large){
+            height: 30vh;
+            gap: 1rem;
         }
 
         h2{
@@ -74,6 +85,12 @@
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+        justify-items: center;
+
+        @include screen (extra-small, large){
+            gap: 2rem;
+            height: 60vh;
+        }
 
         &--username{
             input{
@@ -92,8 +109,42 @@
                 @extend %input-styles;
             }
         }
+
+        &--button{
+
+            button{
+           @extend %button-styles;
+           animation-name: out;
+           animation-duration: 0.7s;
+            }
+            button:hover{
+                animation-name: btn;
+                animation-duration: 0.7s;
+                animation-fill-mode: forwards;
+            }
+        }
     }
 }
 label{
     position: relative;
+}
+@keyframes btn {
+    from{
+        background-color: transparent;
+        box-shadow: none;
+    }
+    to{
+        background-color: gold;
+        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    }
+}
+@keyframes out {
+    from{
+        background-color: gold;
+        box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    }
+    to{
+        background-color: transparent;
+        box-shadow: none;
+    }
 }
