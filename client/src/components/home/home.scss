@@ -19,7 +19,12 @@
 
         @include screen(extra-small, small){
             padding-top: 1rem;
-            padding-right: 3rem;
+            padding-bottom: 3rem;
+        }
+
+        @include screen(small, medium){
+            padding-bottom: 1.5rem;
+            padding-top: 1rem;
         }
 
         h1{

@@ -1,0 +1,79 @@
+@import "../animations/label-animation.css";
+.regestry__panel--repassword input, .regestry__panel--password input, .regestry__panel--username input {
+  font-family: "Syne", sans-serif;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid fuchsia;
+  width: 50%;
+  font-size: 1.2rem;
+  text-align: center;
+  font-style: italic;
+}
+@media (min-width: 230px) and (max-width: 480px) {
+  .regestry__panel--repassword input, .regestry__panel--password input, .regestry__panel--username input {
+    width: 80%;
+  }
+}
+
+.regestry {
+  font-family: "Syne", sans-serif;
+  text-align: center;
+  background-color: #FFDEE9;
+  background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+  height: 100vh;
+  width: 100vw;
+}
+.regestry__title {
+  height: 35vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+@media (min-width: 230px) and (max-width: 480px) {
+  .regestry__title {
+    padding-top: 3rem;
+    margin-bottom: 4rem;
+    height: 20vh;
+  }
+}
+.regestry__title h2 {
+  font-size: 4rem;
+}
+@media (min-width: 230px) and (max-width: 480px) {
+  .regestry__title h2 {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 480px) and (max-width: 960px) {
+  .regestry__title h2 {
+    font-size: 2.5rem;
+  }
+}
+.regestry__title--close {
+  position: absolute;
+  right: 4%;
+  top: 2.5%;
+  font-size: 3rem;
+  cursor: pointer;
+  transition: transform 0.4s;
+}
+@media (min-width: 230px) and (max-width: 480px) {
+  .regestry__title--close {
+    font-size: 2rem;
+    right: 2%;
+    top: 1%;
+  }
+}
+.regestry__title--close:hover {
+  color: red;
+  transform: rotate(360deg) scale(1.5);
+}
+.regestry__panel {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+label {
+  position: relative;
+}/*# sourceMappingURL=regestry.css.map */

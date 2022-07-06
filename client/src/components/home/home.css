@@ -20,7 +20,13 @@
 @media (min-width: 230px) and (max-width: 480px) {
   .home__title {
     padding-top: 1rem;
-    padding-right: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+@media (min-width: 480px) and (max-width: 769px) {
+  .home__title {
+    padding-bottom: 1.5rem;
+    padding-top: 1rem;
   }
 }
 .home__title h1 {

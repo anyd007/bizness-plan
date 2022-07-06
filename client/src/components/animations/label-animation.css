@@ -1,0 +1,45 @@
+input:focus {
+  outline: none;
+  border-bottom: 2px solid fuchsia;
+  transition-duration: 0.4s;
+}
+
+input::-moz-placeholder {
+  opacity: 0;
+}
+
+input:-ms-input-placeholder {
+  opacity: 0;
+}
+
+input::placeholder {
+  opacity: 0;
+}
+
+.spanAnime {
+  width: 100%;
+  position: absolute;
+  top: -60%;
+  left: 50%;
+  transform: translate(-50%);
+  transition-duration: 0.4s;
+}
+
+input:not(:-moz-placeholder-shown) + .spanAnime {
+  left: 10%;
+  top: -10%;
+  font-size: 0.5rem;
+}
+
+input:not(:-ms-input-placeholder) + .spanAnime {
+  left: 10%;
+  top: -10%;
+  font-size: 0.5rem;
+}
+
+label:focus-within > .spanAnime,
+input:not(:placeholder-shown) + .spanAnime {
+  left: 10%;
+  top: -10%;
+  font-size: 0.5rem;
+}/*# sourceMappingURL=label-animation.css.map */
