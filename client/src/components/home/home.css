@@ -1,3 +1,120 @@
+.home__choose--login button, .home__choose--reg button {
+  font-size: 1.5rem;
+  border-radius: 10px;
+  padding: 5px 10px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
 .home {
   font-family: "Syne", sans-serif;
+  background-color: #85FFBD;
+  background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+  height: 100vh;
+  text-align: center;
+}
+.home__title {
+  padding: 3rem;
+}
+.home__title h1 {
+  font-size: 4rem;
+}
+.home__choose {
+  display: grid;
+  grid-template-areas: "area area";
+  grid-template-columns: 1fr 1fr;
+  height: auto;
+  gap: 4rem;
+}
+.home__choose h2 {
+  grid-area: area;
+  font-size: 2.5rem;
+}
+.home__choose--reg {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.home__choose--reg h3 {
+  font-size: 2rem;
+}
+.home__choose--reg button {
+  -webkit-animation-name: out;
+          animation-name: out;
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
+}
+.home__choose--reg button:hover {
+  -webkit-animation-name: btn;
+          animation-name: btn;
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+.home__choose--login {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.home__choose--login h3 {
+  font-size: 2rem;
+}
+.home__choose--login button {
+  -webkit-animation-name: out;
+          animation-name: out;
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
+}
+.home__choose--login button:hover {
+  -webkit-animation-name: btn;
+          animation-name: btn;
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes btn {
+  from {
+    background-color: transparent;
+    box-shadow: none;
+  }
+  to {
+    background-color: gold;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  }
+}
+
+@keyframes btn {
+  from {
+    background-color: transparent;
+    box-shadow: none;
+  }
+  to {
+    background-color: gold;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  }
+}
+@-webkit-keyframes out {
+  from {
+    background-color: gold;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  }
+  to {
+    background-color: transparent;
+    box-shadow: none;
+  }
+}
+@keyframes out {
+  from {
+    background-color: gold;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  }
+  to {
+    background-color: transparent;
+    box-shadow: none;
+  }
 }/*# sourceMappingURL=home.css.map */

@@ -15,7 +15,7 @@ const Home = () =>{
                     <button>WEJDŹ</button>
                 </div>
                 <div className="home__choose--login">
-                    <h3>ZALOGUJ</h3>
+                    <h3>LOGOWANIE</h3>
                     <button>WEJDŹ</button>
                 </div>
             </div>
