@@ -5,13 +5,13 @@ import "./regestry.css"
 
 const Regestry = () =>{
     const history = useNavigate();
-    
+
     return(
         <div className="regestry">
             <div className="regestry__title">
                 <AiOutlineCloseSquare onClick={()=>history("/")} className="regestry__title--close"/>
                 <h2>ZAREJESTRUJ SIĘ</h2>
-                <p>nazwa użytkownika musi zawierać min. 3 znaki<br />hasło min. 6 znaków</p>
+                <p>nazwa użytkownika musi zawierać min. 3 znaki, hasło min. 6 znaków</p>
             </div>
             <div className="regestry__panel">
                 <div className="regestry__panel--username">

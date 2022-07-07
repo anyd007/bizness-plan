@@ -28,25 +28,27 @@
   text-align: center;
   background-color: #FFDEE9;
   background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
-  height: 100vh;
+  height: 100%;
   width: 100vw;
 }
 .regestry__title {
-  height: 35vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 @media (min-width: 230px) and (max-width: 480px) {
   .regestry__title {
-    padding-top: 3rem;
-    height: 25vh;
+    padding-top: 1.5rem;
+    height: auto;
+    gap: 1rem;
   }
 }
 @media (min-width: 480px) and (max-width: 960px) {
   .regestry__title {
-    height: 30vh;
-    gap: 1rem;
+    height: 23vh;
+    padding-top: 1rem;
+    gap: 0.5rem;
   }
 }
 .regestry__title h2 {
@@ -61,6 +63,9 @@
   .regestry__title h2 {
     font-size: 2.5rem;
   }
+}
+.regestry__title p {
+  font-size: 1rem;
 }
 .regestry__title--close {
   position: absolute;
@@ -82,16 +87,21 @@
   transform: rotate(360deg) scale(1.5);
 }
 .regestry__panel {
-  height: 50vh;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   justify-items: center;
 }
-@media (min-width: 230px) and (max-width: 960px) {
+@media (min-width: 230px) and (max-width: 769px) {
   .regestry__panel {
-    gap: 2rem;
-    height: 60vh;
+    height: 80vh;
+  }
+}
+@media (min-width: 769px) and (max-width: 960px) {
+  .regestry__panel {
+    height: 70vh;
+    justify-content: space-between;
   }
 }
 .regestry__panel--button button {
