@@ -118,6 +118,10 @@
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
+.regestry__panel--button button:active {
+  transform: scale(0.9);
+  transition-duration: 100ms;
+}
 
 label {
   position: relative;

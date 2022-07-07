@@ -109,6 +109,10 @@
                 animation-duration: 0.7s;
                 animation-fill-mode: forwards;
             }
+            button:active{
+                transform: scale(0.9);
+                transition-duration: 100ms;
+            }
         }
     }
 }

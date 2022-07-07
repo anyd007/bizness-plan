@@ -1,0 +1,75 @@
+@import "../../responivity/mediaQueries.scss";
+.regInfo{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 3;
+    left: 0%;
+    top: 0%;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+
+    &__text{
+        position: relative;
+        width: 80vw;
+        height: 30vh;
+        border-radius: 10px;
+        backdrop-filter: blur(20px);
+        background-color: rgba(255, 255, 255, 0.5);
+        box-shadow: 0 1px 12px rgba(0, 0, 0, 0.25);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        animation-name: show;
+        animation-duration: 0.5s;
+        z-index: 4;
+
+        @include screen(extra-small, small){
+            height: 25vh;
+        }
+        @include screen(small, medium){
+            height: 35vh;
+        }
+
+        &--close{
+            position: absolute;
+            right: 3%;
+            top: 3%;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: transform 0.4s;
+        }
+        &--close:hover{
+            color: red;
+            transform: rotate(360deg) scale(1.5);
+        }
+
+        h2{
+            position: absolute;
+            width: 100%;
+            color: red;
+            font-size: 1.5rem;
+            left: 50%;
+            transform: translate(-50%);
+            top: 25%;
+
+            @include screen(extra-small, small){
+                font-size: 1rem;
+            }
+            @include screen(small, medium){
+                font-size: 1.3rem;
+            }
+        }
+
+    }
+}
+
+@keyframes show {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

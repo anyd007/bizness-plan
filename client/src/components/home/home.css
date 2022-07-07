@@ -76,6 +76,10 @@
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
+.home__choose--reg button:active {
+  transform: scale(0.9);
+  transition-duration: 100ms;
+}
 .home__choose--login {
   align-items: center;
   display: flex;
@@ -98,6 +102,10 @@
           animation-duration: 0.7s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+}
+.home__choose--login button:active {
+  transform: scale(0.9);
+  transition-duration: 100ms;
 }
 
 @-webkit-keyframes btn {
